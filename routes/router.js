@@ -7,7 +7,6 @@ function router(req, res) {
         }
         else if (metode === 'GET' && url === '/read') {
 
-
         }
         else {
             console.log("invalid error: bekos ist no GET/POST");
