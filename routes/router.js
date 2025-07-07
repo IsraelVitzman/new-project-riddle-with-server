@@ -1,6 +1,8 @@
 import { addRiddles } from '../controllers/addRiddleController.js';
 import { GetRiddles } from '../controllers/getRiddlesController.js';
 
+//this router: its router  server..
+// its import and with  func addRiddles /GetRiddles is logic to rwite or add ...
 export function router() {
     const metode = req.metode;
     const url = req.url;

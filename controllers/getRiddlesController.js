@@ -1,5 +1,5 @@
 import { ReadData } from '../services/readData.js'
-
+//this func server logic to import data from file and send to user...
 export async function GetRiddles(req, res) {
     try {
         const data = await ReadData()
@@ -10,7 +10,5 @@ export async function GetRiddles(req, res) {
         console.log("invalid eroor: ", err);
 
     }
-
-
 
 }

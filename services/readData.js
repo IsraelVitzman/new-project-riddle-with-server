@@ -2,7 +2,6 @@ import { readFile } from "node:fs/promises";
 
 //this func` to read to file txt...
 export async function ReadData() {
-
     try {
         const filePath = "../data/riddles.txt"
         const data = await readFile(filePath, "utf-8")

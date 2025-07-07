@@ -1,5 +1,5 @@
 import { AddRiddles } from '../services/addData.js'
-
+//this func server logic to import data from user and send to file .txt...
 export function AddRiddles(req, res) {
     try {
         let budy = ""
