@@ -1,8 +1,9 @@
 import { createServer } from "node:http";
-const PORT = ""
-const server = createServer()
+import { router } from './routes/router.js';
 
-server.listen(PORT, () => {
+const PORT = 3000
+
+createServer(router).listen(PORT, () => {
     console.log("this lisining... to ..");
 
-})
+});

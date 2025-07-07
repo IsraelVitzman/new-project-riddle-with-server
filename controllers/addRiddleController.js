@@ -1,6 +1,6 @@
-import { addRiddles } from '../services/addData.js'
+import { AddRiddles } from '../services/addData.js'
 
-export function addRiddles(req, res) {
+export function AddRiddles(req, res) {
     try {
         let budy = ""
         req.on('data', chank => {
@@ -8,7 +8,7 @@ export function addRiddles(req, res) {
         });
 
         req.on('end', () => {
-            addRiddles(budy)
+            AddRiddles(budy)
         });
         res.end("Successfully received on the server....")
     } catch (err) {

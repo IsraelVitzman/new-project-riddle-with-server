@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 async function ReadData() {
 
     try {
-        const filePath = "../riddles.txt"
+        const filePath = "../data/riddles.txt"
         const data = await readFile(filePath, "utf-8")
         if (data.length === 0) {
             console.log("this empty..");
