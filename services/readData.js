@@ -1,6 +1,7 @@
 import { readFile } from "node:fs/promises";
 
-async function ReadData() {
+//this func` to read to file txt...
+export async function ReadData() {
 
     try {
         const filePath = "../data/riddles.txt"
@@ -18,5 +19,5 @@ async function ReadData() {
     }
 }
 // הצליח לקרוא בצורה מעולה ....
-const r = await ReadData()
-console.log(r);
+//const r = await ReadData()
+//console.log(r);

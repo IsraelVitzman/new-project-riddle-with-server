@@ -1,7 +1,7 @@
 import { writeFile, readFile } from "node:fs/promises";
 
 //this func` to add to file txt...
-async function AddData(data) {
+export async function AddData(data) {
 
     try {
         const filePath = "../data/riddles.txt"
