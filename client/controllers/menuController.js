@@ -39,9 +39,7 @@ export function showMainMenu() {
 
                 case '4':
                     console.log('✏️ Updating riddle by ID...');
-                    const riddleId = readlineSync.question('Enter riddle ID: ');
-                    const newName = readlineSync.question('Enter new name: ');
-                    UpdateRiddle(riddleId, newName);
+
                     break;
 
                 case '5':

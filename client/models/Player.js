@@ -1,17 +1,12 @@
-export class Player {
-    static list = []
-
-    constructor(name, aveTime, allTime) {
-
-        this.name = name
-        this.allTime = allTime
-        this.aveTime = aveTime
-    }
-    add() {
-        Player.list.push({ "name": this.name, "aveTime": this.aveTime, "allTime": this.allTime })
-    }
-    getList() {
-        return Player.list
-    }
-
+//this func' to add to list players 
+list = []
+export function Player(name, aveTime, allTime) {
+    Player.list.push({ "name": name, "aveTime": aveTime, "allTime": allTime })
 }
+
+
+export function getList() {
+    return Player.list
+}
+
+
