@@ -8,8 +8,7 @@ const server = express()
 
 server.use('/', Router)
 
-server.listen(PORT, () => {
-    console.log("listening...");
-
-})
+server.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server is listening ...`);
+});
 
