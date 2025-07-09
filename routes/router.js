@@ -7,7 +7,6 @@ import express from 'express';
 export function Router() {
 
     const router = express.Router();
-    router.use(express.json())
     try {
         router.get('/read', (req, res) => {
             const body = req.body
