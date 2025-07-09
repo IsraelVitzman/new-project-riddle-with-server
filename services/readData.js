@@ -1,22 +1,21 @@
 import { readFile } from "node:fs/promises";
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
 
-//this func` to read to file txt...
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 export async function ReadData() {
     try {
-        const filePath = "../data/riddles.txt"
-        const data = await readFile(filePath, "utf-8")
+        const filePath = join(__dirname, "../data/riddles.txt");
+        const data = await readFile(filePath, "utf-8");
         if (data.length === 0) {
             console.log("this empty..");
-            return []
+            return [];
         }
-        return JSON.parse(data)
-
-
+        return JSON.parse(data);
     } catch (err) {
-        console.log("invalid eroor : no reading..");
-        return []
+        console.log("invalid error : no reading..", err);
+        return [];
     }
 }
-// הצליח לקרוא בצורה מעולה ....
-//const r = await ReadData()
-//console.log(r);

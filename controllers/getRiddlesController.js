@@ -3,7 +3,7 @@ import { ReadData } from '../services/readData.js'
 export async function GetRiddles(req, res) {
     try {
         const data = await ReadData()
-        res.end(data)
+        res.json(data)
 
 
     } catch (err) {
