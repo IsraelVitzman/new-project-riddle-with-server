@@ -1,21 +1,20 @@
 import { addRiddles } from '../controllers/addRiddleController.js';
 import { GetRiddles } from '../controllers/getRiddlesController.js';
-
+import express from 'express';
 //this router: its router  server..
 // its import and with  func addRiddles /GetRiddles is logic to rwite or add ...
 export function router() {
-    const metode = req.metode;
-    const url = req.url;
+
+    const router = express.Router();
+    router.use(express.json())
     try {
-        if (metode === 'POST' && url === '/add') {
-            addRiddles(req, res)
-        }
-        else if (metode === 'GET' && url === '/read') {
+        router.get('/read', (req, res) => {
+            const body = req.body
+            addRiddles(req, res, body)
+        })
+        router.post('/read', (req, res) => {
             GetRiddles(req, res)
-        }
-        else {
-            console.log("invalid error: bekose ist no GET/POST");
-        }
+        })
 
     } catch (err) {
         console.log(err);
