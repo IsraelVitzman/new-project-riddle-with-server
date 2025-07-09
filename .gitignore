@@ -1,8 +1,8 @@
 # Node modules (do not upload dependencies)
-node_modules/
+node_modules
 
 # Dependency lockfiles (optional to ignore one of them)
-# אם אתה עובד רק עם npm אתה לא חייב את yarn.lock
+
 yarn.lock
 
 # Logs
