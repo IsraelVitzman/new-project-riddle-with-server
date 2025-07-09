@@ -2,7 +2,7 @@ import express from 'express';
 import { Router } from './routes/router.js';
 
 // this server .is import to file routers...
-const PORT = 3000
+const PORT = process.env.PORT || 3000;
 
 const server = express()
 
