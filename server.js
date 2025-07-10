@@ -9,7 +9,7 @@ server.use(express.json())
 
 server.use('/', Routers())
 
-server.listen(PORT, '0.0.0.0', () => {
+server.listen(PORT,  () => {
     console.log(`Server is listening ...`);
 });
 

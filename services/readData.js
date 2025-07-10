@@ -14,8 +14,12 @@ export async function ReadData() {
             return [];
         }
         return JSON.parse(data);
+        
     } catch (err) {
         console.log("invalid error : no reading..", err);
         return [];
     }
 }
+// const r = await ReadData()
+// console.log(r);
+

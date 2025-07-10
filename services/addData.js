@@ -21,7 +21,7 @@ export async function AddData(data) {
             }
         } catch (err) {
 
-            console.log("file is empty");
+            console.log("error", err);
         }
 
         listRiddle.push(data);
@@ -29,7 +29,17 @@ export async function AddData(data) {
         await writeFile(filePath, JSON.stringify(listRiddle, null, 2), "utf-8");
         console.log(" Successfully added riddle.");
     } catch (err) {
-        console.log(" invalid Error: not write data...", err);
+        console.log(" invalid error: not write data...", err);
     }
 }
+
+// const newRiddle = {
+//     id: '12',
+//     name: 'Simple Math',
+//     question: 'What is 2 + 2?',
+//     answer: '4',
+//     hint: 'Very basic math'
+// };
+
+// AddData(newRiddle)
 

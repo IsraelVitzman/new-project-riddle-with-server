@@ -5,9 +5,9 @@ export async function AddRiddles(req, res) {
     try {
         const body = req.body
         await AddData(body)
-        res.end("Successfully received on the server....")
+        res.end("added on the server....");
     } catch (err) {
-        console.log("invalid eroor: no added to server...");
+        console.log("invalid eroor: no added to server...", err);
 
     }
 
